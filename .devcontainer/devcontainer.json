@@ -33,7 +33,8 @@
 				"ms-python.vscode-pylance",
 				"GitHub.copilot",
 				"GitHub.copilot-labs",
-				"ms-vscode.makefile-tools"
+				"ms-vscode.makefile-tools",
+				"ms-python.black-formatter"
 			]
 		}
 	},

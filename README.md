@@ -3,7 +3,7 @@
 _Week 2: Pandas Descriptive Statistics Script_
 
 ### 🎯 Objective: 
-This project is part of the assignment for week 2 of the course. The main objective of this task is to create a Python script that uses the Pandas library to perform descriptive statistics on a dataset, generate a summary of statistics, and create at least one data visualization.
+This project is part of the assignment for week 2 of the course. The main objective of this task is to create a Python script that uses the Pandas library to perform descriptive statistics on a dataset, generate a summary of statistics, and create data visualization that summarize the information.
 
 
 ### 🔍 Dataset: 

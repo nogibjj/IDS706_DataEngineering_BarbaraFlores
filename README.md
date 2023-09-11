@@ -13,4 +13,4 @@ The "LinkedIn Jobs Dataset" is a comprehensive collection of job listings and re
 
 ### 🧪 Methodology
 
-In this project, we analyzed the LinkedIn Tech Jobs dataset, generating the Jupyter file [LinkedInTechJobs.ipynb](https://github.com/nogibjj/IDS706_DataEngineering_BarbaraFlores/blob/main/LinkedInTechJobs.ipynb) with a summary of the conclusions drawn.
+In this project, we analyzed the LinkedIn Tech Jobs dataset, in the Jupyter file [LinkedInTechJobs.ipynb](https://github.com/nogibjj/IDS706_DataEngineering_BarbaraFlores/blob/main/LinkedInTechJobs.ipynb) with a summary of the conclusions drawn.

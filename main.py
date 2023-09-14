@@ -11,8 +11,7 @@ def exploring_data(path):
 
 def aggregated_stats(path):
     df = pd.read_csv(path)
-    aggregated_stats = df[['Total_applicants', "Employee_count","LinkedIn_Followers" ]].agg(["mean", "median","count"])
-    print( aggregated_stats)
+    print( df[['Total_applicants', "Employee_count", "LinkedIn_Followers"]].agg(["mean", "median", "count"]))
 
 def pie_plot(path, variable):
     df = pd.read_csv(path)

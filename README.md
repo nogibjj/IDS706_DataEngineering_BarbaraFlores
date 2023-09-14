@@ -17,4 +17,4 @@ In this project, the [LinkedInTechJobsDataset.csv](LinkedInTechJobsDataset.csv) 
 
 1. In a Jupyter file [LinkedInTechJobs.ipynb](https://github.com/nogibjj/IDS706_DataEngineering_BarbaraFlores/blob/main/LinkedInTechJobs.ipynb) where it is possible to easily visualize the outputs and the code used.
 
-2. In a Python script [main.py](https://github.com/nogibjj/IDS706_DataEngineering_BarbaraFlores/blob/main/main.py) file, which generates the output xx.
+2. In a Python script [main.py](https://github.com/nogibjj/IDS706_DataEngineering_BarbaraFlores/blob/main/main.py) file, which generates the results presented in **this Markdown file**

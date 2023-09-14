@@ -19,9 +19,30 @@ def pie_plot(path, variable):
     plt.axis('equal')  
     plt.tight_layout()
     plt.savefig("{0}.png".format(variable))
+
+def bar_plot_skills(path):
+    df = pd.read_csv(path)   
+    skills = df[['PYTHON', 'C++', 'JAVA', 'HADOOP', 'SCALA', 'FLASK',
+       'PANDAS', 'SPARK', 'NUMPY', 'PHP', 'SQL', 'MYSQL', 'CSS', 'MONGODB',
+       'NLTK', 'TENSORFLOW', 'LINUX', 'RUBY', 'JAVASCRIPT', 'DJANGO', 'REACT',
+       'REACTJS', 'AI', 'UI', 'TABLEAU', 'NODEJS', 'EXCEL', 'POWER BI',
+       'SELENIUM', 'HTML', 'ML']].sum().sort_values(ascending=False)
+    
+    plt.figure(figsize=(10, 6))   
+    skills.plot(kind='bar', color='skyblue')
+
+    plt.xlabel('Skills')
+    plt.ylabel('Sum')
+    plt.title('Most in-demand skills and technologies')
+
+    plt.xticks(rotation=45)
+
+    plt.tight_layout()
+    plt.savefig("skills.png")
   
 
 if __name__ == "__main__":
     exploring_data("LinkedInTechJobsDataset.csv")
     pie_plot("LinkedInTechJobsDataset.csv",
              "Involvement")
+    bar_plot_skills("LinkedInTechJobsDataset.csv")

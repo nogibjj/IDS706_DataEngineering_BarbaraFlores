@@ -21,6 +21,8 @@ In this project, the [LinkedInTechJobsDataset.csv](LinkedInTechJobsDataset.csv) 
 
 ### 📊 Results
 
-![imagen2](https://raw.githubusercontent.com/nogibjj/IDS706_DataEngineering_BarbaraFlores_cambios/main/Involvement.png)
+![Involvement](https://raw.githubusercontent.com/nogibjj/IDS706_DataEngineering_BarbaraFlores_cambios/main/Involvement.png)
 
 We see that the majority of job postings are for mid-senior and entry-level positions.
+
+![skills](https://raw.githubusercontent.com/nogibjj/IDS706_DataEngineering_BarbaraFlores/main/skills.png)

@@ -13,7 +13,7 @@ def pie_plot(path, variable):
     df = pd.read_csv(path)
     category_count = df[variable].value_counts()
     plt.figure(figsize=(6, 6))   
-    explode = (0.1, 0, 0, 0)  # Esto separará la primera porción (índice 0) del resto.
+    explode = (0.1, 0, 0, 0)  
     plt.pie(category_count, labels=category_count.index, autopct='%1.1f%%', startangle=180, explode=explode)
     plt.title("Number of job positions with respect to the variable {0} ".format(variable))
     plt.axis('equal')  

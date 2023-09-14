@@ -20,3 +20,5 @@ In this project, the [LinkedInTechJobsDataset.csv](LinkedInTechJobsDataset.csv) 
 2. In a Python script [main.py](https://github.com/nogibjj/IDS706_DataEngineering_BarbaraFlores/blob/main/main.py) file, which generates the results presented in **this Markdown file**
 
 ### 📊 Results
+
+Involvement.png

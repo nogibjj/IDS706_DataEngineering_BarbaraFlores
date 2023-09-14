@@ -39,10 +39,22 @@ def bar_plot_skills(path):
 
     plt.tight_layout()
     plt.savefig("skills.png")
+
+def hist_plot(path,variable):
+    df = pd.read_csv(path) 
+    plt.hist(df[[variable]], bins=10,)
+    plt.xlabel(variable)
+    plt.ylabel('frequency')
+    plt.title('Histogram of {0} per job posting'.format(variable))
+    plt.savefig("{}.png".format(variable))
   
+
 
 if __name__ == "__main__":
     exploring_data("LinkedInTechJobsDataset.csv")
-    pie_plot("LinkedInTechJobsDataset.csv",
-             "Involvement")
+    plt.clf()
+    pie_plot("LinkedInTechJobsDataset.csv", "Involvement")
+    plt.clf()
     bar_plot_skills("LinkedInTechJobsDataset.csv")
+    plt.clf()
+    hist_plot("LinkedInTechJobsDataset.csv", "Total_applicants")

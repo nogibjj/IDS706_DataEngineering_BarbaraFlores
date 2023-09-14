@@ -25,4 +25,14 @@ In this project, the [LinkedInTechJobsDataset.csv](LinkedInTechJobsDataset.csv) 
 
 We see that the majority of job postings are for mid-senior and entry-level positions.
 
+A question that arises when analyzing this dataset is: What are the most demanded skills in technology job postings? This can be visualized in the following chart. It is worth mentioning that this chart represents the total requirements for a specific skill out of a total of 811 records in the dataset.
+
 ![skills](https://raw.githubusercontent.com/nogibjj/IDS706_DataEngineering_BarbaraFlores/main/skills.png)
+
+We can see that from this sample of job postings, the most demanded skills or tools are AI, UI, Excel, SQL, and Java
+
+### 👥 Histogram of total number of applicants per job posting
+
+![Total_applicants](https://raw.githubusercontent.com/nogibjj/IDS706_DataEngineering_BarbaraFlores/main/Total_applicants.png)
+
+From the histogram, it is evident that the majority of job postings have more than 500 applicants. This underscores the importance of having a professional profile that can stand out among other applicants.

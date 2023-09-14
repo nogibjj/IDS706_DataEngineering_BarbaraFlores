@@ -9,6 +9,11 @@ def exploring_data(path):
     print(df.info(),"/n")
     print(df.describe(),"/n")
 
+def aggregated_stats(path):
+    df = pd.read_csv(path)
+    aggregated_stats = df[['Total_applicants', "Employee_count","LinkedIn_Followers" ]].agg(["mean", "median","count"])
+    print( aggregated_stats)
+
 def pie_plot(path, variable):
     df = pd.read_csv(path)
     category_count = df[variable].value_counts()
@@ -49,9 +54,9 @@ def hist_plot(path,variable):
     plt.savefig("{}.png".format(variable))
   
 
-
 if __name__ == "__main__":
     exploring_data("LinkedInTechJobsDataset.csv")
+    aggregated_stats("LinkedInTechJobsDataset.csv")
     plt.clf()
     pie_plot("LinkedInTechJobsDataset.csv", "Involvement")
     plt.clf()

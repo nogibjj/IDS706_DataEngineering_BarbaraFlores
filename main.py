@@ -9,17 +9,17 @@ def exploring_data(path):
     df = pl.read_csv(path)
     return(df.head(5))
 
-#def suma(path, variable):
+def mean_variable(path, variable):
+    df = pl.read_csv(path)
+    return df[variable].mean()
 
+def median_variable(path, variable):
+    df = pl.read_csv(path)
+    return df[variable].median()
 
-#def aggregated_stats(path):
-#    df = pl.read_csv(path)
-#    print(
-#        df[["Total_applicants", "Employee_count", "LinkedIn_Followers"]].agg(
-#            ["mean", "median", "count"]
-#        )
-#    )
-
+def count_variable(path, variable):
+    df = pl.read_csv(path)
+    return df[variable].sum() / df[variable].mean() 
 
 def pie_plot(path, variable):
     df = pd.read_csv(path)
@@ -104,16 +104,26 @@ def hist_plot(path, variable):
     )
     plt.xlabel(variable)
     plt.ylabel("frequency")
-    plt.title("Histogram of {0} per job posting".format(variable))
+    plt.title("Histogram of {0} per job posting".format(path, variable))
     plt.savefig("{}.png".format(variable.lower()))
 
 
 if __name__ == "__main__":
-    print(exploring_data("LinkedInTechJobsDataset.csv"))
-   # aggregated_stats("LinkedInTechJobsDataset.csv")
+    path = "LinkedInTechJobsDataset.csv"
+    print(exploring_data(path))
+    print()
+    for i in ["Total_applicants", "Employee_count", "LinkedIn_Followers"]:
+        print(f"The mean of variable {i} is {round(mean_variable(path, i))}.")
+    print()
+    for i in ["Total_applicants", "Employee_count", "LinkedIn_Followers"]:
+        print(f"The median of variable {i} is {round(median_variable(path, i))}.")
+    print()
+    for i in ["Total_applicants", "Employee_count", "LinkedIn_Followers"]:
+        print(f"The count of variable {i} is {round(count_variable(path, i))}.")
     plt.clf()
     pie_plot("LinkedInTechJobsDataset.csv", "Involvement")
     plt.clf()
     bar_plot_skills("LinkedInTechJobsDataset.csv")
     plt.clf()
     hist_plot("LinkedInTechJobsDataset.csv", "Total_applicants")
+

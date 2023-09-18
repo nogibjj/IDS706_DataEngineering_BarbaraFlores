@@ -16,6 +16,24 @@ def check_exploring_data(path):
         )
 
 
+def check_mean_variable(path, variable):
+    df = pl.read_csv(path)
+    if mean_variable(path, variable) ==  df[variable].mean():
+        return True
+    else:
+        raise Exception(
+            f"Error in funtion mean_variable: {response.status_code}"   
+        )   
+    
+def check_median_variable(path, variable):
+    df = pl.read_csv(path)
+    if median_variable(path, variable) ==  df[variable].median():
+        return True
+    else:
+        raise Exception(
+            f"Error in funtion median_variable: {response.status_code}"   
+        )       
+
 def check_github_file_existence(owner, repo, path):
     url = f"https://raw.githubusercontent.com/{owner}/{repo}/main/{path}"
 

@@ -2,7 +2,7 @@ import polars as pl
 import matplotlib.pyplot as plt
 import requests
 
-from main import exploring_data, mean_variable, median_variable,  hist_plot
+from main import exploring_data, mean_variable, median_variable, count_variable, hist_plot
 
 
 def check_exploring_data(path):
@@ -40,6 +40,8 @@ def check_count_variable(path, variable):
         raise Exception(
             f"Error in funtion count_variable: {response.status_code}"   
         )      
+    
+
 
 def check_github_file_existence(owner, repo, path):
     url = f"https://raw.githubusercontent.com/{owner}/{repo}/main/{path}"
@@ -58,6 +60,9 @@ def check_github_file_existence(owner, repo, path):
 if __name__ == "__main__":
     assert check_exploring_data("LinkedInTechJobsDataset.csv")
 
+    assert check_mean_variable("LinkedInTechJobsDataset.csv","Total_applicants")
+    assert check_median_variable("LinkedInTechJobsDataset.csv","Total_applicants")
+    assert check_count_variable("LinkedInTechJobsDataset.csv","Total_applicants")
     owner = "nogibjj"
     repo = "IDS706_DataEngineering_BarbaraFlores_Miniproject3"
     path1 = "total_applicants.png"

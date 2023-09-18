@@ -39,12 +39,3 @@ if __name__ == "__main__":
     assert check_github_file_existence(owner, repo, path3)
 
 
-   # test_main()
-
-
-#owner = "nogibjj"
-#repo = "IDS706_DataEngineering_BarbaraFlores_Miniproject3"
-#path = "Total_applicants.png"
-
-#exists = check_github_file_existence(owner, repo, path)
-#print(f"¿El archivo {path} existe en el repositorio? {exists}")

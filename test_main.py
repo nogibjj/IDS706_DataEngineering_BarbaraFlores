@@ -1,9 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import requests
+import pytest
 
 from main import exploring_data, aggregated_stats, pie_plot, bar_plot_skills, hist_plot
-
 
 
 def check_github_file_existence(owner, repo, path):
@@ -15,7 +15,10 @@ def check_github_file_existence(owner, repo, path):
     elif response.status_code == 404:
         return False
     else:
-        raise Exception(f"Error al verificar la existencia del archivo: {response.status_code}")
+        raise Exception(
+            f"Error al verificar la existencia del archivo: {response.status_code}"
+        )
+
 
 if __name__ == "__main__":
     owner = "nogibjj"
@@ -26,5 +29,3 @@ if __name__ == "__main__":
     assert check_github_file_existence(owner, repo, path2)
     path3 = "involvement.png"
     assert check_github_file_existence(owner, repo, path3)
-
-

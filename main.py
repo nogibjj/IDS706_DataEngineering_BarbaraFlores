@@ -57,7 +57,7 @@ if __name__ == "__main__":
     exploring_data("LinkedInTechJobsDataset.csv")
     aggregated_stats("LinkedInTechJobsDataset.csv")
     plt.clf()
-    pie_plot("LinkedInTechJobsDataset.csv", "Involvement")
+    pie_plot("LinkedInTechJobsDataset.csv", "involvement")
     plt.clf()
     bar_plot_skills("LinkedInTechJobsDataset.csv")
     plt.clf()

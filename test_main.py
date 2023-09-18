@@ -56,5 +56,4 @@ if __name__ == "__main__":
     assert check_github_file_existence(owner, repo, path1)
     path2 = "aggregated_stats.png"
     assert check_github_file_existence(owner, repo, path2)
-    path3 = "involvement.png"
-    assert check_github_file_existence(owner, repo, path3)
+

@@ -2,7 +2,7 @@
 import pandas as pd
 import polars as pl
 import matplotlib.pyplot as plt
-import plotly.express as px
+#import plotly.express as px
 
 
 
@@ -106,7 +106,7 @@ def hist_plot(path, variable):
     )
     plt.xlabel(variable)
     plt.ylabel("frequency")
-    plt.title("Histogram of {0} per job posting".format(path, variable))
+    plt.title(f"Histogram of {variable} per job posting in {path}")
     plt.savefig("{}.png".format(variable.lower()))
 
 

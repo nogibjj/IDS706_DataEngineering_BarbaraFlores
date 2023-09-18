@@ -3,7 +3,7 @@ import polars as pl
 import matplotlib.pyplot as plt
 import requests
 
-from main import exploring_data, pie_plot, bar_plot_skills, hist_plot
+from main import exploring_data, hist_plot
 
 
 def check_exploring_data(path):

@@ -4,7 +4,7 @@ install:
 
 test:
 	#python -m pytest -vv --cov=main --cov=mylib test_*.py
-	python -m pytest -vv test_*.py
+	python -m pytest -vv test_main.py
 
 format:	
 	black *.py 

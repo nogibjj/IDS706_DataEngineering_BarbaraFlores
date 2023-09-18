@@ -7,18 +7,9 @@ from main import exploring_data, aggregated_stats, pie_plot, bar_plot_skills, hi
 
 
 def check_github_file_existence(owner, repo, path):
-    """
-    Verifica si un archivo existe en un repositorio público de GitHub.
-
-    :param owner: El nombre del propietario del repositorio.
-    :param repo: El nombre del repositorio.
-    :param path: La ruta del archivo que deseas verificar.
-    :return: True si el archivo existe, False en caso contrario.
-    """
     url = f"https://raw.githubusercontent.com/{owner}/{repo}/main/{path}"
 
     response = requests.get(url)
-
     if response.status_code == 200:
         return True
     elif response.status_code == 404:

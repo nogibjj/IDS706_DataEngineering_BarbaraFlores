@@ -2,7 +2,7 @@ import polars as pl
 import matplotlib.pyplot as plt
 import requests
 
-from main import exploring_data, hist_plot
+from main import exploring_data, mean_variable, median_variable,  hist_plot
 
 
 def check_exploring_data(path):

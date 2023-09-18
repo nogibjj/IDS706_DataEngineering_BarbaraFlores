@@ -17,8 +17,6 @@ def check_github_file_existence(owner, repo, path):
     else:
         raise Exception(f"Error al verificar la existencia del archivo: {response.status_code}")
 
-# Ejemplo de uso para el archivo específico que mencionaste
-
 if __name__ == "__main__":
     owner = "nogibjj"
     repo = "IDS706_DataEngineering_BarbaraFlores_Miniproject3"

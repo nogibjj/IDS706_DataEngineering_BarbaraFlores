@@ -2,6 +2,8 @@
 import pandas as pd
 import polars as pl
 import matplotlib.pyplot as plt
+import plotly.express as px
+
 
 
 # Read Dataset and exploring
@@ -24,14 +26,14 @@ def count_variable(path, variable):
 def pie_plot(path, variable):
     df = pd.read_csv(path)
     category_count = df[variable].value_counts()
-    plt.figure(figsize=(6, 6))
-    explode = (0.1, 0, 0, 0)
+ #   plt.figure(figsize=(6, 6))
+    #explode = (0.1, 0, 0, 0)
     plt.pie(
         category_count,
         labels=category_count.index,
         autopct="%1.1f%%",
         startangle=180,
-        explode=explode,
+     #   explode=explode,
     )
     plt.title(
         "Number of job positions with respect to the variable {0} ".format(variable)
@@ -109,17 +111,16 @@ def hist_plot(path, variable):
 
 
 if __name__ == "__main__":
-    path = "LinkedInTechJobsDataset.csv"
-    print(exploring_data(path))
+    print(exploring_data("LinkedInTechJobsDataset.csv"))
     print()
     for i in ["Total_applicants", "Employee_count", "LinkedIn_Followers"]:
-        print(f"The mean of variable {i} is {round(mean_variable(path, i))}.")
+        print(f"The mean of variable {i} is {round(mean_variable('LinkedInTechJobsDataset.csv', i))}.")
     print()
     for i in ["Total_applicants", "Employee_count", "LinkedIn_Followers"]:
-        print(f"The median of variable {i} is {round(median_variable(path, i))}.")
+        print(f"The median of variable {i} is {round(median_variable('LinkedInTechJobsDataset.csv', i))}.")
     print()
     for i in ["Total_applicants", "Employee_count", "LinkedIn_Followers"]:
-        print(f"The count of variable {i} is {round(count_variable(path, i))}.")
+        print(f"The count of variable {i} is {round(count_variable('LinkedInTechJobsDataset.csv', i))}.")
     plt.clf()
     pie_plot("LinkedInTechJobsDataset.csv", "Involvement")
     plt.clf()

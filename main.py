@@ -1,23 +1,24 @@
 # imports
 import pandas as pd
+import polars as pl
 import matplotlib.pyplot as plt
 
 
 # Read Dataset and exploring
 def exploring_data(path):
-    df = pd.read_csv(path)
-    print(df.head(5), "/n")
-    print(df.info(), "/n")
-    print(df.describe(), "/n")
+    df = pl.read_csv(path)
+    return(df.head(5))
+
+#def suma(path, variable):
 
 
-def aggregated_stats(path):
-    df = pd.read_csv(path)
-    print(
-        df[["Total_applicants", "Employee_count", "LinkedIn_Followers"]].agg(
-            ["mean", "median", "count"]
-        )
-    )
+#def aggregated_stats(path):
+#    df = pl.read_csv(path)
+#    print(
+#        df[["Total_applicants", "Employee_count", "LinkedIn_Followers"]].agg(
+#            ["mean", "median", "count"]
+#        )
+#    )
 
 
 def pie_plot(path, variable):
@@ -108,8 +109,8 @@ def hist_plot(path, variable):
 
 
 if __name__ == "__main__":
-    exploring_data("LinkedInTechJobsDataset.csv")
-    aggregated_stats("LinkedInTechJobsDataset.csv")
+    print(exploring_data("LinkedInTechJobsDataset.csv"))
+   # aggregated_stats("LinkedInTechJobsDataset.csv")
     plt.clf()
     pie_plot("LinkedInTechJobsDataset.csv", "Involvement")
     plt.clf()

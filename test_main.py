@@ -1,8 +1,19 @@
 import pandas as pd
+import polars as pl
 import matplotlib.pyplot as plt
 import requests
 
 from main import exploring_data, pie_plot, bar_plot_skills, hist_plot
+
+
+def check_exploring_data(path):
+    df = pl.read_csv(path)
+    if exploring_data(path) is not None:
+        return True
+    else:
+        raise Exception(
+            f"Error when checking the existence of the result: {response.status_code}"
+        )
 
 
 def check_github_file_existence(owner, repo, path):
@@ -15,11 +26,13 @@ def check_github_file_existence(owner, repo, path):
         return False
     else:
         raise Exception(
-            f"Error al verificar la existencia del archivo: {response.status_code}"
+            f"Error when checking the existence of the file: {response.status_code}"
         )
 
 
 if __name__ == "__main__":
+    assert check_exploring_data("LinkedInTechJobsDataset.csv")
+
     owner = "nogibjj"
     repo = "IDS706_DataEngineering_BarbaraFlores_Miniproject3"
     path1 = "total_applicants.png"

@@ -26,7 +26,7 @@ If we calculate some descriptive statistics, we obtain the following:
 
 What can we observe regarding the required level of the job postings?"
 
-![Involvement](https://raw.githubusercontent.com/nogibjj/IDS706_DataEngineering_BarbaraFlores_Miniproject3/main/Involvement.png)
+![Involvement](https://raw.githubusercontent.com/nogibjj/IDS706_DataEngineering_BarbaraFlores_Miniproject3/main/involvement.png)
 
 We see that the majority of job postings are for mid-senior and entry-level positions.
 
@@ -38,6 +38,6 @@ We can see that from this sample of job postings, the most demanded skills or to
 
 ### 👥 Histogram of total number of applicants per job posting
 
-![Total_applicants](https://raw.githubusercontent.com/nogibjj/IDS706_DataEngineering_BarbaraFlores_Miniproject3/main/Total_applicants.png)
+![Total_applicants](https://raw.githubusercontent.com/nogibjj/IDS706_DataEngineering_BarbaraFlores_Miniproject3/main/total_applicants.png)
 
 From the histogram, it is evident that the majority of job postings have more than 500 applicants. This underscores the importance of having a professional profile that can stand out among other applicants.

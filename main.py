@@ -104,8 +104,8 @@ def hist_plot(path, variable):
     )
     plt.xlabel(variable)
     plt.ylabel("frequency")
-    plt.title("Histogram of {0} per job posting".format(variable.lower()))
-    plt.savefig("{}.png".format(variable))
+    plt.title("Histogram of {0} per job posting".format(variable))
+    plt.savefig("{}.png".format(variable.lower()))
 
 
 if __name__ == "__main__":

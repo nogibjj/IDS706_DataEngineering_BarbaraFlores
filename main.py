@@ -50,15 +50,18 @@ def hist_plot(path,variable):
     plt.xlabel(variable)
     plt.ylabel('frequency')
     plt.title('Histogram of {0} per job posting'.format(variable))
-    plt.savefig("{}.png".format(variable))
+    plt.savefig("{}.png".format(variable.lower()))
   
 
 if __name__ == "__main__":
     exploring_data("LinkedInTechJobsDataset.csv")
     aggregated_stats("LinkedInTechJobsDataset.csv")
     plt.clf()
-    pie_plot("LinkedInTechJobsDataset.csv", "involvement")
+    pie_plot("LinkedInTechJobsDataset.csv", "Involvement")
     plt.clf()
     bar_plot_skills("LinkedInTechJobsDataset.csv")
     plt.clf()
     hist_plot("LinkedInTechJobsDataset.csv", "Total_applicants")
+
+
+

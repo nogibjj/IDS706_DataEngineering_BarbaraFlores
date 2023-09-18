@@ -82,7 +82,7 @@ def bar_plot_skills(path):
             ]
         ]
         .sum()
-        .sort_values(ascending=False)
+        #.sort_values(ascending=False)
     )
 
     plt.figure(figsize=(10, 6))
@@ -99,7 +99,7 @@ def bar_plot_skills(path):
 
 
 def hist_plot(path, variable):
-    df = pd.read_csv(path)
+    df = pl.read_csv(path)
     plt.hist(
         df[[variable]],
         bins=10,

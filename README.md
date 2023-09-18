@@ -24,17 +24,6 @@ If we calculate some descriptive statistics, we obtain the following:
 
 ![aggregated_stats](https://raw.githubusercontent.com/nogibjj/IDS706_DataEngineering_BarbaraFlores_Miniproject3/main/aggregated_stats.png)
 
-What can we observe regarding the required level of the job postings?"
-
-![Involvement](https://raw.githubusercontent.com/nogibjj/IDS706_DataEngineering_BarbaraFlores_Miniproject3/main/involvement.png)
-
-We see that the majority of job postings are for mid-senior and entry-level positions.
-
-A question that arises when analyzing this dataset is: What are the most demanded skills in technology job postings? This can be visualized in the following chart. It is worth mentioning that this chart represents the total requirements for a specific skill out of a total of 811 records in the dataset.
-
-![skills](https://raw.githubusercontent.com/nogibjj/IDS706_DataEngineering_BarbaraFlores_Miniproject3/main/skills.png)
-
-We can see that from this sample of job postings, the most demanded skills or tools are AI, UI, Excel, SQL, and Java
 
 ### 👥 Histogram of total number of applicants per job posting
 

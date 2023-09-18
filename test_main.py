@@ -1,9 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import requests
-import pytest
 
-from main import exploring_data, aggregated_stats, pie_plot, bar_plot_skills, hist_plot
+from main import exploring_data, pie_plot, bar_plot_skills, hist_plot
 
 
 def check_github_file_existence(owner, repo, path):

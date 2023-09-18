@@ -12,8 +12,7 @@ def check_exploring_data(path):
     else:
         raise Exception(
             f"Error when checking the existence of the result: {response.status_code}"
-        )
-
+            )
 
 def check_mean_variable(path, variable):
     df = pl.read_csv(path)
@@ -31,7 +30,16 @@ def check_median_variable(path, variable):
     else:
         raise Exception(
             f"Error in funtion median_variable: {response.status_code}"   
-        )       
+        )      
+
+def check_count_variable(path, variable):
+    df = pl.read_csv(path)
+    if count_variable(path, variable) == df[variable].sum() / df[variable].mean() :
+        return True
+    else:
+        raise Exception(
+            f"Error in funtion count_variable: {response.status_code}"   
+        )      
 
 def check_github_file_existence(owner, repo, path):
     url = f"https://raw.githubusercontent.com/{owner}/{repo}/main/{path}"

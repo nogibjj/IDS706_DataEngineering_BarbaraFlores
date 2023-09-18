@@ -30,6 +30,7 @@ def hist_plot(path, variable):
     plt.ylabel("frequency")
     plt.title(f"Histogram of {variable} per job posting in {path}")
     plt.savefig("{}.png".format(variable.lower()))
+    return "done!"
 
 
 if __name__ == "__main__":

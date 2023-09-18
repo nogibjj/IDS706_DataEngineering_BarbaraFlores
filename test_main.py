@@ -13,6 +13,16 @@ def check_exploring_data(path):
         raise Exception(
             f"Error when checking the existence of the result: {response.status_code}"
             )
+    
+def check_hist_plot(path, variable):
+    df = pl.read_csv(path)
+    if hist_plot(path, variable) == "done!":
+        return True
+    else:
+        raise Exception(
+            "The histogram has not been generated"
+            )
+
 
 def check_mean_variable(path, variable):
     df = pl.read_csv(path)
@@ -57,9 +67,10 @@ def check_github_file_existence(owner, repo, path):
         )
 
 
+
 if __name__ == "__main__":
     assert check_exploring_data("LinkedInTechJobsDataset.csv")
-
+    assert check_hist_plot("LinkedInTechJobsDataset.csv","Total_applicants")
     assert check_mean_variable("LinkedInTechJobsDataset.csv","Total_applicants")
     assert check_median_variable("LinkedInTechJobsDataset.csv","Total_applicants")
     assert check_count_variable("LinkedInTechJobsDataset.csv","Total_applicants")
